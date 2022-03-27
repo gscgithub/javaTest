@@ -1,13 +1,15 @@
 package gsc.someTest;
 
-import java.nio.charset.Charset;
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.regex.Pattern;
+import org.junit.Test;
 
 public class SomeTest {
 	
 	String packageStr = "";
+
+	@Test
+	public void test1() {
+		System.out.println(1 == 1.0);
+	}
 
 	public static void main(String[] args) {
 	}

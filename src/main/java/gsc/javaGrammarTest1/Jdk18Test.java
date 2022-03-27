@@ -8,6 +8,28 @@ import java.util.stream.Collectors;
 public class Jdk18Test {
 
     @Test
+    public void streamTest4() {
+        String [] ss = {"abc","aaa"};
+        List<Integer> collect = Arrays.stream(ss).map(s -> {
+            return s.length();
+        }).collect(Collectors.toList());
+    }
+
+    @Test
+    public void streamTest3() {
+        // 并行流 多个线程执行
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
+        numbers.parallelStream()
+                .forEach(System.out::print);
+
+        //
+        System.out.println("=========================");
+        numbers.stream()
+                .sequential()
+                .forEach(System.out::print);
+    }
+
+    @Test
     public void streamTest2() {
         List<String> list = Arrays.asList("ab","333","dd");
         String joiningStr = list.stream().collect(Collectors.joining(",,"));

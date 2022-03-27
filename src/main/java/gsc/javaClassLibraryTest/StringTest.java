@@ -6,7 +6,27 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringTest {
-	
+
+	@Test
+	public void strTest6() {
+		"".intern();
+		new String("abc");
+	}
+
+	@Test
+	public void strTest5() {
+		final int[] is = {1,3,5,7};
+		for (int i : is) {
+			System.out.print(i);
+		}
+		System.out.println();
+		is[0] = 0;
+		for (int i : is) {
+			System.out.print(i);
+		}
+		System.out.println();
+	}
+
 	@Test
 	public void splitTest() {
 

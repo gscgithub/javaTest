@@ -2,7 +2,20 @@ package gsc.javaGrammarTest1;
 
 import org.junit.Test;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 public class ExceptionTest {
+
+	@Test
+	public void test2() {
+
+		try {
+			FileInputStream fis = new FileInputStream("abc");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
 
 	@Test
 	public void test1() {
